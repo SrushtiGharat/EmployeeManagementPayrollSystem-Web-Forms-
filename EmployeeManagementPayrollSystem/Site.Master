@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="EmployeeManagementPayrollSystem.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Payroll</title>
+    <link href="Pages/Css/payroll-form.css" type="text/css" rel="stylesheet" />
+    <link href="Pages/Css/home.css" type="text/css" rel="stylesheet" />
+    <link href="Pages/Css/EmployeeManagement.css" type="text/css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;1,500&display=swap"
+        rel="stylesheet" />
+
+</head>
+<body class="master-body">
+    <form runat="server" class="master-form">
+        <div class="master-div">
+            <div class="nav-bar">
+                <header class="flex-row-center header">
+                    <div class="logo">
+                        <asp:Image src="../../Pages/Assets/logo.png" runat="server" />
+                        <div>
+                            <a runat="server" onserverclick="btn_GetEmployees" class="anchor"><span class="emp-text">EMPLOYEE PAYROLL</span></a><br>
+                        </div>
+                    </div>
+                </header>
+            </div>
+
+            <div class="display-content">
+                <div class="parag">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+
